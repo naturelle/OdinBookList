@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://bootswatch.com/4/yeti/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <script src="https://use.fontawesome.com/0bde90f811.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <title>Document</title>
+</head>
+<body>
+  
+  <button id="topBtn"><i class="fas fa-angle-double-up"></i> </button>
+  <button id="downBtn"><i class="fas fa-angle-double-down"></i> </button>
+    <div class="container mt-4">
+        <h1 class="display-4 text-center">
+         My<span class="text-primary">Libr</span>ary</h1>
+            <form id="book-form" autocomplete="on">
+                <div class="form-group mb-2">
+                  <label for="title">Title</label>
+                  <input type="text" id="title" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label for="author">Author</label>
+                  <input type="text" id="author" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label for="pages">Pages</label>
+                  <input type="number" id="pages" class="form-control" required>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="readStatus"  >
+                    <label for="isread">Read?</label>
+                  </div>
+               
+                <input type="submit" value="Add Book" class="btn btn-primary btn-block">
+                
+              </form>
+              <div class = "table-responsive">
+              
+              <table class="table mt-5 mb-4" width="100%"  data-toggle="table" id="testTable"
+              data-search="true"
+              data-filter-control="true" 
+              data-show-export="true"
+              data-click-to-select="true"
+              data-toolbar="#toolbar">
+                <thead class="thead-dark sticky-top ">
+                  <tr>
+                    <th style="width: 35%">Title</th>
+                    <th style="width: 35%">Author</th>
+                    <th style="width: 10%">Pages</th>
+                    <th style="width: 10%"> Read?</th>
+                    <th style="width: 10%"> Delete</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody id="book-list"></tbody>
+              </table>
+            </div>
+    </div>
+
+    <script src="app.js"></script>
+ 
+</body>
+</html>
